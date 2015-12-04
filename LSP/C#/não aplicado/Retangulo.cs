@@ -2,13 +2,7 @@ public class Retangulo
 {
 	public virtual int Largura { get; set; }
 	public virtual int Altura { get; set; }
-	public int Area 
-	{ 
-		get 
-		{ 
-			return Largura * Altura; 
-		} 
-	}
+	public int Area => Largura * Altura;
 }
 
 public class Quadrado : Retangulo

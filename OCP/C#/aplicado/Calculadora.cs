@@ -17,12 +17,5 @@ class Calculadora : ICalculadora
     }
     
     decimal Calcular(ItemCarrinho item)
-    {
-        foreach (var regra in _regras)
-        {
-            if (regra.PodeCalcular(item.Medida))
-                return regra.Calcular(item);
-        }
-        return 0;
-    }
+        => _regras.First(regra => regra.PodeCalcular(item.Medida)).Calcular(item);
 }
