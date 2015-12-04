@@ -4,16 +4,16 @@ interface
 
 type
   TCarrinho = class
-  
-  	public
-	  function ValorTotal: Double;
+
+  public
+    function ValorTotal: Double;
   end;
 
 implementation
 
 function TCarrinho.ValorTotal: Double;
 var
-	count, pacoteDeTres: Integer;
+  count, pacoteDeTres: Integer;
 begin
   Result := 0;
   for count := 1 to Itens.Length do
@@ -28,7 +28,7 @@ begin
       pacoteDeTres := Itens[count].Quantidade / 3;
       Result := Result - pacoteDeTres * 0.2;
     end;
-    // Mais regras podem vir
+  // Mais regras podem vir
   end;
 end;
 

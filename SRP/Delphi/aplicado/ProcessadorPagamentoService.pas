@@ -12,18 +12,18 @@ implementation
 
 procedure TProcessadorPagamentoService.Processar(detalhesPagamento: TDetalhesPagamento; carrinho: TCarrinho);
 var
-	gatewayPagamento: TGatewayPagamento;
+    gatewayPagamento: TGatewayPagamento;
 begin
-	gatewayPagamento := TGatewayPagamento.Create;
-	
-	gatewayPagamento.Credencial := "bla";
-	gatewayPagamento.NumeroCartao := detalhesDoPagamento.NumeroCartao;
-	gatewayPagamento.MesExpiracao := detalhesDoPagamento.MesExpiracao;
-	gatewayPagamento.AnoExpiracao := detalhesDoPagamento.AnoExpiracao;
-	gatewayPagamento.NomeNoCartao := detalhesDoPagamento.NomeNoCartao;
-	gatewayPagamento.Valor := carrinho.ValorTotal;
+    gatewayPagamento := TGatewayPagamento.Create;
+    
+    gatewayPagamento.Credencial := "bla";
+    gatewayPagamento.NumeroCartao := detalhesDoPagamento.NumeroCartao;
+    gatewayPagamento.MesExpiracao := detalhesDoPagamento.MesExpiracao;
+    gatewayPagamento.AnoExpiracao := detalhesDoPagamento.AnoExpiracao;
+    gatewayPagamento.NomeNoCartao := detalhesDoPagamento.NomeNoCartao;
+    gatewayPagamento.Valor := carrinho.ValorTotal;
 
-	gatewayPagamento.Cobrar;
+    gatewayPagamento.Cobrar;
 end
 
 end.

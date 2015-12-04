@@ -6,7 +6,7 @@ uses
 interface
 
 type
-	FormasPagamento = (CARTAOCREDITO);
+  FormasPagamento = (CARTAOCREDITO);
   
   TPedido = class  
     private
@@ -32,7 +32,7 @@ procedure TPedido.Comprar(carrinho: TCarrinho; detalhesPagamento: TDetalhesPagam
 begin
   if detalhesDoPagamento.formaPagamento = CARTAOCREDITO then
     ProcessadorPagamento.Processar(detalhesDoPagamento, carrinho.ValorTotal);
-		
+    
   ReservadorEstoque.Reservar(carrinho)
 
   if deveNotificaCliente then

@@ -4,15 +4,15 @@ interface
 
 type
   ICalculadora = interface
-  	function Calcular(Item: TItemCarrinho): Double;
+    function Calcular(Item: TItemCarrinho): Double;
   end;
 
   TCalculadora = class(TInterfacedObject, ICalculadora)
-  	private 
-	   Regras: TList<ICalculadorRegra>;	  
-  	public
-	   constructor Create; overload;
-	   function Calcular(Item: TItemCarrinho): Double;
+    private 
+     Regras: TList<ICalculadorRegra>;   
+    public
+     constructor Create; overload;
+     function Calcular(Item: TItemCarrinho): Double;
   end;
 
 implementation
@@ -32,7 +32,7 @@ var
 begin
   for count := 1 to Regras.Length do
   begin
-  	regra := Regras[count];
+    regra := Regras[count];
     if regra.PodeCalcular(regra.medida) then
     begin
       Result := regra.Calcular(Item);

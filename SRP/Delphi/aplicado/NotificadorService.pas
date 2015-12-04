@@ -4,8 +4,8 @@ interface
 
 type
   TNotificadorService = class
-  	public 
-	  procedure NotificarCliente(carrinho: TCarrinho);
+    public 
+    procedure NotificarCliente(carrinho: TCarrinho);
   end;
 
 implementation
@@ -18,7 +18,7 @@ var
 begin
   emailCliente := carrinho.EmailCliente;
   if (emailCliente = nil) or (Trim(emailCliente) = '') then
-  	Exit;
+    Exit;
   
   IdSMTP := TIdSMTP.Create;
   IdSMTP.Host := 'localhost';  
