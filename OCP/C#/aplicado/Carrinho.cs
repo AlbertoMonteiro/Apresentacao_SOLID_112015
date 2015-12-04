@@ -4,11 +4,10 @@ class Carrinho
 	
     public Carrinho()
     {
-	    _calculadora = new Calculadora();
+        _calculadora = new Calculadora();
     }
 	
     public List<ItemCarrinho> Itens { get; set; }
 	
-    public decimal ValorTotal
-	    => Itens.Sum(item => _calculadora.Calcular(item));
+    public decimal ValorTotal => Itens.Sum(item => _calculadora.Calcular(item));
 }
