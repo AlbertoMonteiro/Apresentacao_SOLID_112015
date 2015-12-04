@@ -22,10 +22,11 @@ public class Teste
     public void AreaDeveSer20QuandoQuadrado_4X5()
     {
         //Perceba que esse teste não faz mais sentido, pois o valor "retangulo.TamanhoLado=4" será subscrito 
-        IForma retangulo = new Quadrado();
-        retangulo.TamanhoLado = 4;
-        retangulo.TamanhoLado = 5;
-        Assert.AreEqual(20, retangulo.Area);
+        var quadrado = new Quadrado();
+        quadrado.TamanhoLado = 4;
+        quadrado.TamanhoLado = 5;
+        IForma forma = quadrado; 
+        Assert.AreEqual(20, forma.Area);
     }
 
 }
