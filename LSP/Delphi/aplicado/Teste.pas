@@ -18,30 +18,36 @@ implementation
 procedure TestTRetangulo.AreaDeveSer6QuandoRetangulo_2X3;
 var
   retangulo: IForma;
+  retangulo: TRetangulo;
 begin
   retangulo := TRetangulo.Create;
   retangulo.Altura := 2;
   retangulo.Largura := 3;
-  CheckEquals(6, retangulo.Area);
+  forma := retangulo;
+  CheckEquals(6, forma.Area);
 end;
 
 procedure TestTRetangulo.AreaDeveSer9QuandoQuadrado_3X3;
 var
-  retangulo: IForma;
+  forma: IForma;
+  quadrado: TQuadrado;
 begin
-  retangulo := TQuadrado.Create;
-  retangulo.Altura := 3;
-  CheckEquals(9, retangulo.Area);
+  quadrado := TQuadrado.Create;
+  quadrado.TamanhoLado := 3;
+  forma := quadrado;
+  CheckEquals(9, forma.Area);
 end;
 
 procedure TestTRetangulo.AreaDeveSer20QuandoQuadradoRetangulo_4X5;
 var
-  retangulo: IForma;
+  forma: IForma;
+  quadrado: TQuadrado;
 begin
-  retangulo := TQuadrado.Create;
-  retangulo.Altura := 4; // não faz mais sentido
-  retangulo.Largura := 5; // não faz mais sentido
-  CheckEquals(20, retangulo.Area); // não faz mais sentido
+  quadrado := TQuadrado.Create;
+  quadrado.TamanhoLado := 4; // não faz mais sentido
+  quadrado.TamanhoLado := 5; // não faz mais sentido
+  forma := quadrado;
+  CheckEquals(20, forma.Area); // não faz mais sentido
 end;
 
 initialization
